@@ -22,7 +22,7 @@ const AddBlog = () => {
 
   const sendRequest = async (type = "signin") => {
     const res = await axios
-      .post("http://localhost:5000/posts", {
+      .post("https://blogapp-auth.onrender.com/posts", {
         title: inputs.title,
         content: inputs.content,
         imageUrl: inputs.image,

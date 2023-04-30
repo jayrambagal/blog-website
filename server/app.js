@@ -20,7 +20,7 @@ const port  = process.env.PORT || 5002
 const path = process.env.DB_PATH
 
 // connecting to the Database
-mongoose.connect(path)
+mongoose.connect("mongodb+srv://jayrambagal:jayram1234@cluster0.pfm45vg.mongodb.net/test")
   .then(() => console.log("Database connected!"))
   .catch(err => console.log(err));
 

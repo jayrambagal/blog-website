@@ -28,7 +28,7 @@ const Auth = () => {
     event.preventDefault();
 
     try {
-      const response = await axios.post('/signup', { 
+      const response = await axios.post('https://blogapp-auth.onrender.com/signup', { 
         name:inputs.name, 
         email:inputs.email, 
         password:inputs.password });
@@ -52,7 +52,7 @@ const Auth = () => {
 
   function handleSignin(e) {
     e.preventDefault();
-    axios.post('http://localhost:5000/signin', {
+    axios.post('https://blogapp-auth.onrender.com/signin', {
         email: inputs.email,
         password: inputs.password
       })

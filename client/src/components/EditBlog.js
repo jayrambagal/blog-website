@@ -21,7 +21,7 @@ const EditBlog = (props) => {
   useEffect(() => {
     console.log(id);
     axios
-      .get(`http://localhost:5000/posts/${id}`)
+      .get(`https://blogapp-auth.onrender.com/posts/${id}`)
       .then((response) => {
         console.log(response.data);
         setTitle(response.data.title);
@@ -54,7 +54,7 @@ const EditBlog = (props) => {
     };
 
     axios
-      .put(`http://localhost:5000/posts/${id}`, updatedBlog)
+      .put(`https://blogapp-auth.onrender.com/posts/${id}`, updatedBlog)
       .then((response) => {
         console.log(response);
         navigate("/myBlogs")
