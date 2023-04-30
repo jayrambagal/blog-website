@@ -20,7 +20,7 @@ function Header() {
   const [value, setValue] = useState();
 
   function handleLogout() {
-    axios.get('http://localhost:5000/logout')
+    axios.get('https://blogapp-auth.onrender.com/logout')
       .then(() => {
         // clear any user data or authentication tokens from local storage or state
         // navigate the user to the login screen or a public page

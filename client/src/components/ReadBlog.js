@@ -21,7 +21,7 @@ const ReadBlog = (props) => {
   useEffect(() => {
     console.log(id);
     axios
-      .get(`http://localhost:5000/posts/${id}`)
+      .get(`https://blogapp-auth.onrender.com/posts/${id}`)
       .then((response) => {
         console.log(response.data);
         setTitle(response.data.title);

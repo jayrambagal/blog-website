@@ -18,7 +18,7 @@ function UserBlogs() {
 
   const sendRequest = async () => {
     const res = await axios
-      .get(`http://localhost:5000/posts`)
+      .get(`https://blogapp-auth.onrender.com/posts`)
       .catch((err) => console.log(err));
     // console.log(res);
     const data = await res.data;
@@ -35,7 +35,7 @@ function UserBlogs() {
 
   function handleDelete(id) {
     console.log(id);
-    axios.delete(`http://localhost:5000/posts/${id}`)
+    axios.delete(`https://blogapp-auth.onrender.com/posts/${id}`)
   .then(response => {
     if (response.status === 200) {
       // Reload the page to show the updated list of blog posts
