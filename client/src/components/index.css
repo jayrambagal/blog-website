@@ -1,0 +1,61 @@
+.containter_blog{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: linear-gradient(110deg, rgb(206, 203, 114) 60%, #d0c989 60%);
+}
+
+.sub_containter{
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 90%;
+    row-gap: 30px;
+    column-gap: 40px;
+}
+.create{
+    cursor: pointer;
+    height: 400;
+}
+.create:hover{
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
+}
+.card{
+    width: 345px;
+    height: 400px;
+   
+}
+.card:hover{
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+.Auth_container{
+    margin-top: -40px;
+    width: 100%;
+    height: 110vh;
+    background: linear-gradient(110deg, rgb(206, 203, 114) 60%, #d0c989 60%);
+    display: flex;
+    justify-content: center;
+    
+}
+
+.form_auth{
+    width: 550px;
+    height: 600px;
+    margin-top: 100px;
+    border: 1px solid green;
+    background-color:whitesmoke;
+}
+
+/* .container_addBlog{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    background-color: whitesmoke;
+}
+.form_add{
+    width: 400px;
+    height: 300px;
+} */

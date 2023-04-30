@@ -5,13 +5,14 @@ const Blog = require("../DataBase/blogSchema");
 // ********************** POST *************************************
 router.post("/posts", async (req, res) => {
   try {
-    const { title, content } = req.body;
+    const { title, content,imageUrl } = req.body;
     const id = Math.floor(Math.random() * 9000000000000000) + 1000000000000000; // Generate a random ID
 
     const blog = new Blog({
       id,
       title,
       content,
+      imageUrl,
     });
 
     await blog.save();
@@ -51,14 +52,17 @@ router.get("/posts/:id", async (req, res) => {
 // **************************** Update **********************************************************
 router.put('/posts/:id', async (req, res) => {
     try {
+      console.log(req.params.id);
       const postId = req.params.id;
-      const { title, content } = req.body;
+      const { title, content,imageUrl,created_at } = req.body;
         
       const post = await Blog.findOne({id:postId});
       // Find the post by ID and update its title and content
       if (post) {
         post.title = req.body.title || post.title;
         post.content = req.body.content || post.content;
+        post.imageUrl = req.body.imageUrl || post.imageUrl
+        post.created_at = Date.now()
         
         const updatedPost = await post.save();
         res.send({ success: true, data: updatedPost });

@@ -3,7 +3,10 @@ const mongoose = require("mongoose")
 const cookieParser = require('cookie-parser')
 require('dotenv').config()
 require("cookie-parser")
-const app = express()
+const cors = require("cors");
+const app = express();
+
+app.use(cors());
 
 app.use(cookieParser())
 app.use(express.json())
